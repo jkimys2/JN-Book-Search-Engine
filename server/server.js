@@ -16,14 +16,15 @@ const server = new ApolloServer({
   resolvers,
 });
 
-app.use(routes);
+
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async () => {
   await server.start();
 
   app.use(express.urlencoded({ extended: false }));
   app.use(express.json());
-
+  app.use(routes);
+  
   app.use(
     "/graphql",
     expressMiddleware(server, {

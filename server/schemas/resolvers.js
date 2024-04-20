@@ -23,8 +23,8 @@ const resolvers = {
     },
 
     // Authenticate a user when they log in and assign a token
-    login: async (parent, { username, password }) => {
-      const user = await User.findOne({ username });
+    login: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
 
       if (!user) {
         throw AuthenticanError;
@@ -51,7 +51,7 @@ const resolvers = {
       }
       throw AuthenticanError;
     },
-    
+
     // Find user and delete book from their list
     deleteBook: async (parent, { user, params }, context) => {
       if (context.user) {

@@ -1,5 +1,5 @@
 // Import files
-const { User } = require("../models/User");
+const { User } = require("../models/");
 const { signToken, AuthenticanError } = require("../utils/auth");
 
 const resolvers = {
@@ -41,7 +41,7 @@ const resolvers = {
     },
 
     // Find user and save book to their list
-    saveBook: async (parent, { user, body }, context) => {
+    saveBook: async (parent, { body }, context) => {
       if (context.user) {
         return User.findByIdAndUpdate(
           { _id: context.user._id },
@@ -53,11 +53,11 @@ const resolvers = {
     },
 
     // Find user and delete book from their list
-    deleteBook: async (parent, { user, params }, context) => {
+    deleteBook: async (parent, { bookId }, context) => {
       if (context.user) {
         return User.findByIdAndUpdate(
-          { _id: user._id },
-          { $pull: { savedBooks: { bookId: params.bookId } } },
+          { _id: context.user._id },
+          { $pull: { savedBooks: { bookId } } },
           { new: true }
         );
       }

@@ -21,6 +21,7 @@ const resolvers = {
 
       return { token, user };
     },
+
     // Authenticate a user when they log in and assign a token
     login: async (parent, { username, password }) => {
       const user = await User.findOne({ username });
@@ -37,6 +38,30 @@ const resolvers = {
 
       const token = signToken(user);
       return { token, user };
+    },
+
+    // Find user and save book to their list
+    saveBook: async (parent, { user, body }, context) => {
+      if (context.user) {
+        return User.findByIdAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { savedBooks: body } },
+          { new: true, runValidators: true }
+        );
+      }
+      throw AuthenticanError;
+    },
+    
+    // Find user and delete book from their list
+    deleteBook: async (parent, { user, params }, context) => {
+      if (context.user) {
+        return User.findByIdAndUpdate(
+          { _id: user._id },
+          { $pull: { savedBooks: { bookId: params.bookId } } },
+          { new: true }
+        );
+      }
+      throw AuthenticanError;
     },
   },
 };

@@ -56,3 +56,23 @@ In order to navigate through the book search engine code, you will need to:
 
 ## Usage
 
+As a user, you can search for a book by typing any book title in the search bar and clicking the ```Submit Search``` button! You can also create an account by clicking the ```Login/Sign Up``` button. Once you click that button, you can toggle between the login and sign up options. Once you sign up for a new account, it will automatically log you in! When you are logged in, you can save a book by clicking the ```Save This Book!``` button below the book information. 
+
+When you navigate to the ```See Your Books``` page, you will be able to see all of the books that you saved! You can also delete the saved book by clicking ```Delete this Book!```, and it will delete that saved book from your saved books page!
+
+Finally, once you click ```Logout```, it will log you out and bring you to the main page!
+
+You can see how the search engine appears below:
+
+![Screenshot]()
+
+
+## Credits
+
+Thank you, Chris B, for all your help! 😊👍
+
+
+## Links
+
+[GitHub Repository](https://github.com/jkimys2/JN-Book-Search-Engine) <br>
+[Deployed Page](https://jn-book-search-engine.onrender.com)

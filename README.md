@@ -64,7 +64,8 @@ Finally, once you click ```Logout```, it will log you out and bring you to the m
 
 You can see how the search engine appears below:
 
-![Screenshot]()
+![Main Page](./client/src/assets/main.png)
+![Saved Page](./client/src/assets/saved.png)
 
 
 ## Credits

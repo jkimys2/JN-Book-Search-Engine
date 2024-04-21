@@ -41,11 +41,11 @@ const resolvers = {
     },
 
     // Find user and save book to their list
-    saveBook: async (parent, { body }, context) => {
+    saveBook: async (parent, { bookInput }, context) => {
       if (context.user) {
         return User.findByIdAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { savedBooks: body } },
+          { $addToSet: { savedBooks: bookInput } },
           { new: true, runValidators: true }
         );
       }

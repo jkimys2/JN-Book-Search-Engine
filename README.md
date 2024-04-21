@@ -51,7 +51,7 @@ THEN I am logged out of the site and presented with a menu with the options Sear
 In order to navigate through the book search engine code, you will need to:
 
 - Install the dependencies in the package.json files by running `npm i` in the integrated terminal <br>
-- Run the files by typing `npm run develop` in root directory of the integrated terminal <br>
+- Run the files by typing `npm run develop` in the root directory of the integrated terminal <br>
 
 
 ## Usage

@@ -70,7 +70,7 @@ You can see how the search engine appears below:
 
 ## Credits
 
-Thank you, Chris B, for all your help! 😊👍
+Thank you, Chris B and Michael H, for all your help! 😊👍
 
 
 ## Links

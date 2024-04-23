@@ -76,4 +76,4 @@ Thank you, Chris B, for all your help! 😊👍
 ## Links
 
 [GitHub Repository](https://github.com/jkimys2/JN-Book-Search-Engine) <br>
-[Deployed Page](https://jn-book-search-engine.onrender.com)
+[Deployed Page](https://jn-book-search-engine.onrender.com/)

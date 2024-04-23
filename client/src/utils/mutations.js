@@ -30,6 +30,7 @@ export const SAVE_BOOK = gql`
       _id
       username
       email
+      bookCount
       savedBooks {
         authors
         bookId
@@ -49,6 +50,7 @@ export const DELETE_BOOK = gql`
       _id
       username
       email
+      bookCount
       savedBooks {
         authors
         bookId
